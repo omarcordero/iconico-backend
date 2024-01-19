@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "63233901631",
+    "firebase_url": "https://delivery-c5399.firebaseio.com",
+    "project_id": "delivery-c5399",
+    "storage_bucket": "delivery-c5399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63233901631:android:a452a2e71b4b45cc39248a",
+        "android_client_info": {
+          "package_name": "com.sigties.food.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63233901631-62hoolgah9diq6h45s46fto4kr1anhoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCBv4ajLDwdtrlMLERVqonwL5aQtAKpKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63233901631-62hoolgah9diq6h45s46fto4kr1anhoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

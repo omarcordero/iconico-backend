@@ -1,0 +1,44 @@
+DELIMITER $$
+CREATE FUNCTION `ST_Distance_Sphere`(SOURCE POINT, DEST POINT) RETURNS float
+BEGIN
+    DECLARE radlat1 FLOAT;
+    DECLARE radlat2 FLOAT;
+    DECLARE radlon1 FLOAT;
+    DECLARE radlon2 FLOAT;
+    DECLARE theta FLOAT;
+    DECLARE radtheta FLOAT;
+    DECLARE dist FLOAT;
+    DECLARE PI FLOAT;
+    DECLARE Q_LAT FLOAT;
+    DECLARE Q_LONG FLOAT;
+    DECLARE NAV_LAT FLOAT;
+    DECLARE NAV_LONG FLOAT;
+
+    SET PI = PI();
+    SET dist = 0;
+    SET Q_LONG = ST_X(SOURCE);
+    SET Q_LAT = ST_Y(SOURCE);
+    SET NAV_LONG = ST_X(DEST);
+    SET NAV_LAT = ST_Y(DEST);
+
+    IF ((Q_LAT IS NULL OR Q_LAT = 0) OR (Q_LONG IS NULL OR Q_LONG = 0)
+        OR (NAV_LAT IS NULL OR NAV_LAT = 0) OR (NAV_LONG IS NULL OR NAV_LONG = 0)) THEN
+        RETURN dist;
+    ELSE
+        SET radlat1 = PI * (Q_LAT/180);
+        SET radlat2 = PI * (NAV_LAT/180);
+        SET radlon1 = PI * (Q_LONG/180);
+        SET radlon2 = PI * (NAV_LONG/180);
+        SET theta = Q_LONG-NAV_LONG;
+        SET radtheta = PI * (theta/180);
+        SET dist = SIN(radlat1) * SIN(radlat2) + COS(radlat1) * COS(radlat2) * COS(radtheta);
+        SET dist = ACOS(dist);
+        SET dist = dist * (180/PI);
+        SET dist = dist * 60 * 1.1515;
+        SET dist = dist * 1.609344;
+
+        SET dist = CEILING(dist/0.0010000);
+
+    RETURN dist;
+    END IF;
+END$$

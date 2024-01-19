@@ -1,0 +1,69 @@
+body {
+    background: #fff;
+}
+
+.jambo_table th a {
+    color: #0EAED1;
+}
+
+/*a {*/
+    /*color: #33c126;*/
+/*}*/
+
+.nav_title {
+    background-color: #3ADF2C!important;
+}
+
+.left_col {
+    background-color: #fff;
+}
+
+.nav.side-menu>li>a, .nav.child_menu>li>a {
+    color: #555!important;
+}
+
+.nav.side-menu>li>a:hover, .nav>li>a:focus {
+
+}
+
+.nav.side-menu>li>a:hover {
+    color: #999!important;
+}
+
+.nav.side-menu>li.current-page, .nav.side-menu>li.active {
+    border-right: 5px solid #3ADF2C;
+}
+
+.nav.side-menu>li.current-page>a>i, .nav.side-menu>li.active>a>i {
+    color: #3ADF2C;
+}
+
+/*.bg-green {*/
+    /*background: #3ADF2C !important;*/
+    /*border: 1px solid #3ADF2C !important;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.btn-success {*/
+    /*background: #3ADF2C;*/
+    /*border: 1px solid #3ADF2C;*/
+/*}*/
+
+.menu_section h3 {
+    text-shadow: none;
+    color: #000;
+}
+
+.site_title {
+    font-weight: bold;
+}
+
+.nav.side-menu>li.active>a {
+    text-shadow: none;
+    background: none;
+    box-shadow: none;
+}
+
+.nav_menu {
+    background: #fff;
+}
